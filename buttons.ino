@@ -2,7 +2,7 @@
 
 Joystick_ Joystick{JOYSTICK_DEFAULT_REPORT_ID, JOYSTICK_TYPE_JOYSTICK, JOYSTICK_DEFAULT_BUTTON_COUNT, JOYSTICK_DEFAULT_HATSWITCH_COUNT, true, true, true, true, true, true, false, false, false, false, false};
 
-const int analogConstants[6] = {A0, A1, A2, A3, A4, A5};
+const int analogConstants[] = {A0, A1, A2, A3, A4, A5};
 
 void setup() {
   for(int i = 0; i<=13; i++){
@@ -14,12 +14,12 @@ void setup() {
 }
 
 // Last state of the button
-int lastButtonState[14] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int lastButtonState[13] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 int lastAnalogValue[6] = {0,0, 0, 0, 0, 0};
 
 void loop() {
 
-  for(int i = 0; i<14; i++){
+  for(int i = 0; i<13; i++){
     int currentState = !digitalRead(i);
     if(currentState!=lastButtonState[i]){
       lastButtonState[i] = currentState;
@@ -28,7 +28,7 @@ void loop() {
   }
 
   
-  for(int i = 0; i<6; i++){
+  for(int i = 0; i<sizeof(analogConstants)/2; i++){
     int currentAnalogValue = analogRead(analogConstants[i]);
     Serial.println(currentAnalogValue);
     if(currentAnalogValue!=lastAnalogValue[i]){
