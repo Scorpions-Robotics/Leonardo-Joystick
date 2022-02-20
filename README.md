@@ -16,4 +16,4 @@ $ git clone https://github.com/Scorpions-Robotics/Leonardo-Joystick
 You can see some other examples for the library at [this repository](https://github.com/MHeironimus/ArduinoJoystickLibrary).
 
 ## Issues
-If you're facing with any kind of problem while using the code, feel free to open an issue. Good luck!
+If you're facing with any kind of problem, feel free to open an issue. Good luck!
