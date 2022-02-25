@@ -10,8 +10,9 @@ After installing and setting up Git Bash and Arduino IDE, We are ready to upload
 $ git clone https://github.com/Scorpions-Robotics/Leonardo-Joystick
 ```
 3. Open the buttons.ino file on the Arduino IDE.
-4. Go to tools section from menu and choose the correct board and port.
-5. Click the upload button and good job, you did it!
+4. Configure analogConstants variable according to the pins you need.
+5. Go to tools section from menu and choose the correct board and port.
+6. Click the upload button and good job, you did it!
 
 You can see some other examples for the library at [this repository](https://github.com/MHeironimus/ArduinoJoystickLibrary).
 
